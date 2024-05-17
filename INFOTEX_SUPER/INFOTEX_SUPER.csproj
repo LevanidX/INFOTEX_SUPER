@@ -46,6 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ClientMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClientMenu.Designer.cs">
+      <DependentUpon>ClientMenu.cs</DependentUpon>
+    </Compile>
     <Compile Include="LoginForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -57,6 +63,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>OOO_INFOTEXDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="OrderMaking.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OrderMaking.Designer.cs">
+      <DependentUpon>OrderMaking.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RegistrationForm.cs">
@@ -65,8 +77,16 @@
     <Compile Include="RegistrationForm.Designer.cs">
       <DependentUpon>RegistrationForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="SqlFunctions.cs" />
+    <Compile Include="UserConfig.cs" />
+    <EmbeddedResource Include="ClientMenu.resx">
+      <DependentUpon>ClientMenu.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="LoginForm.resx">
       <DependentUpon>LoginForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OrderMaking.resx">
+      <DependentUpon>OrderMaking.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

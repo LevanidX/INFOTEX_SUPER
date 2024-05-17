@@ -1061,7 +1061,7 @@ namespace INFOTEX_SUPER {
                 this.columnaccount_fullname.AllowDBNull = false;
                 this.columnaccount_fullname.MaxLength = 100;
                 this.columnaccount_phone_number.AllowDBNull = false;
-                this.columnaccount_phone_number.MaxLength = 15;
+                this.columnaccount_phone_number.MaxLength = 20;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -4422,7 +4422,7 @@ SELECT account_type_id, account_type_name FROM account_types WHERE (account_type
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = @"DELETE FROM [dbo].[Accounts] WHERE (([account_id] = @Original_account_id) AND ([account_login] = @Original_account_login) AND ([account_password] = @Original_account_password) AND ([account_type_number] = @Original_account_type_number) AND ([account_fullname] = @Original_account_fullname) AND ([account_phone_number] = @Original_account_phone_number))";
+            this._adapter.DeleteCommand.CommandText = @"DELETE FROM [Accounts] WHERE (([account_id] = @Original_account_id) AND ([account_login] = @Original_account_login) AND ([account_password] = @Original_account_password) AND ([account_type_number] = @Original_account_type_number) AND ([account_fullname] = @Original_account_fullname) AND ([account_phone_number] = @Original_account_phone_number))";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_account_id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "account_id", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_account_login", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "account_login", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
@@ -4432,7 +4432,7 @@ SELECT account_type_id, account_type_name FROM account_types WHERE (account_type
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_account_phone_number", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "account_phone_number", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = @"INSERT INTO [dbo].[Accounts] ([account_login], [account_password], [account_type_number], [account_fullname], [account_phone_number]) VALUES (@account_login, @account_password, @account_type_number, @account_fullname, @account_phone_number);
+            this._adapter.InsertCommand.CommandText = @"INSERT INTO [Accounts] ([account_login], [account_password], [account_type_number], [account_fullname], [account_phone_number]) VALUES (@account_login, @account_password, @account_type_number, @account_fullname, @account_phone_number);
 SELECT account_id, account_login, account_password, account_type_number, account_fullname, account_phone_number FROM Accounts WHERE (account_id = SCOPE_IDENTITY())";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@account_login", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "account_login", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -4442,7 +4442,7 @@ SELECT account_id, account_login, account_password, account_type_number, account
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@account_phone_number", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "account_phone_number", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[Accounts] SET [account_login] = @account_login, [account_password] = @account_password, [account_type_number] = @account_type_number, [account_fullname] = @account_fullname, [account_phone_number] = @account_phone_number WHERE (([account_id] = @Original_account_id) AND ([account_login] = @Original_account_login) AND ([account_password] = @Original_account_password) AND ([account_type_number] = @Original_account_type_number) AND ([account_fullname] = @Original_account_fullname) AND ([account_phone_number] = @Original_account_phone_number));
+            this._adapter.UpdateCommand.CommandText = @"UPDATE [Accounts] SET [account_login] = @account_login, [account_password] = @account_password, [account_type_number] = @account_type_number, [account_fullname] = @account_fullname, [account_phone_number] = @account_phone_number WHERE (([account_id] = @Original_account_id) AND ([account_login] = @Original_account_login) AND ([account_password] = @Original_account_password) AND ([account_type_number] = @Original_account_type_number) AND ([account_fullname] = @Original_account_fullname) AND ([account_phone_number] = @Original_account_phone_number));
 SELECT account_id, account_login, account_password, account_type_number, account_fullname, account_phone_number FROM Accounts WHERE (account_id = @account_id)";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@account_login", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "account_login", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -4473,7 +4473,7 @@ SELECT account_id, account_login, account_password, account_type_number, account
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
             this._commandCollection[0].CommandText = "SELECT account_id, account_login, account_password, account_type_number, account_" +
-                "fullname, account_phone_number FROM dbo.Accounts";
+                "fullname, account_phone_number FROM Accounts";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         

@@ -41,8 +41,8 @@
             this.account_passwordTextBox = new System.Windows.Forms.TextBox();
             this.account_loginTextBox = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.oOO_INFOTEXDataSet = new INFOTEX_SUPER.OOO_INFOTEXDataSet();
             this.accountsBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.oOO_INFOTEXDataSet = new INFOTEX_SUPER.OOO_INFOTEXDataSet();
             this.accountsTableAdapter = new INFOTEX_SUPER.OOO_INFOTEXDataSetTableAdapters.AccountsTableAdapter();
             this.tableAdapterManager = new INFOTEX_SUPER.OOO_INFOTEXDataSetTableAdapters.TableAdapterManager();
             account_type_numberLabel = new System.Windows.Forms.Label();
@@ -50,8 +50,8 @@
             account_fullnameLabel = new System.Windows.Forms.Label();
             account_passwordLabel = new System.Windows.Forms.Label();
             account_loginLabel = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.oOO_INFOTEXDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.accountsBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.oOO_INFOTEXDataSet)).BeginInit();
             this.SuspendLayout();
             // 
             // account_type_numberLabel
@@ -161,15 +161,15 @@
             this.label1.Text = "Здарова, падаван";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // oOO_INFOTEXDataSet
-            // 
-            this.oOO_INFOTEXDataSet.DataSetName = "OOO_INFOTEXDataSet";
-            this.oOO_INFOTEXDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
             // accountsBindingSource
             // 
             this.accountsBindingSource.DataMember = "Accounts";
             this.accountsBindingSource.DataSource = this.oOO_INFOTEXDataSet;
+            // 
+            // oOO_INFOTEXDataSet
+            // 
+            this.oOO_INFOTEXDataSet.DataSetName = "OOO_INFOTEXDataSet";
+            this.oOO_INFOTEXDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // accountsTableAdapter
             // 
@@ -192,7 +192,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(714, 297);
+            this.ClientSize = new System.Drawing.Size(297, 297);
             this.Controls.Add(account_type_numberLabel);
             this.Controls.Add(this.account_type_numberTextBox);
             this.Controls.Add(this.btnRegister);
@@ -208,8 +208,8 @@
             this.Name = "RegistrationForm";
             this.Text = "RegistrationForm";
             this.Load += new System.EventHandler(this.RegistrationForm_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.oOO_INFOTEXDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.accountsBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.oOO_INFOTEXDataSet)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

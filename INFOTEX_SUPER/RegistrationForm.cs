@@ -35,6 +35,8 @@ namespace INFOTEX_SUPER
                 this.accountsBindingSource.EndEdit();
                 this.tableAdapterManager.UpdateAll(oOO_INFOTEXDataSet);
 
+                MessageBox.Show("Успешная регистрация");
+
                 this.Close();
                 _loginForm.Show();
             }
